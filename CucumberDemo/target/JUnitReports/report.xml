@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="3" time="93.903">
+    <testcase classname="Register &amp; Login" name="Verify Registration Login Functionality" time="45.112">
+        <system-out><![CDATA[Given User is on Homepage of Application....................................passed
+When I Click on Sign in.....................................................passed
+When I fill the email id for register user and click create account button..passed
+Then It should ask me for more details for registration and click save button.passed
+Then I should see firstname and lastname as username........................passed
+Then I should able to logout and  login again from provided credential......passed
+Then I should see firstname and lastname as username........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Product Search" name="Product Search in my search page" time="7.499">
+        <failure message="Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given User authenticated and is on Homepage of Application..................passed
+Then I should able to enter search text in search box.......................passed
+When I click on Search buttom...............................................passed
+Then I should able to see list of products for my search....................passed
+Then It should ask me for more details for registration and click save button.failed
+
+StackTrace:
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at PageObjects.SignInPageObjects.Select_Radiobtn(SignInPageObjects.java:88)
+	at StepDefinitions.Step1_LoginSteps.it_should_ask_me_for_more_details_for_registration_and_click_save_button(Step1_LoginSteps.java:63)
+	at ✽.It should ask me for more details for registration and click save button(file:///D:/ews/CucumberDemo/Features/Page2_ProductSearch.feature:10)
+]]></failure>
+    </testcase>
+    <testcase classname="Checkout process" name="To checkout a product from search result" time="40.96">
+        <skipped><![CDATA[Given User is authenticated and have product list in search list............passed
+Then I should able to add the item in cart and navigate successfully till payment page.passed
+Then Validate product details in payment page...............................pending
+]]></skipped>
+    </testcase>
+</testsuite>
