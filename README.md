@@ -31,6 +31,6 @@ c.Page3_Checkout
 To run end to end scenario right click on Testrunner.java and Run As a Junit Test.
 
 Reporting-
-Reports is written into their respective /target directories after a successful run.
+Reports are written into their respective /target directories after a successful run.
 Reports are generated in the form of HTMLReports and JUnit Reports with files as index.html and report.xml.
 User is able to open the report as per his choice of editor either on web browser ,xml editor.
